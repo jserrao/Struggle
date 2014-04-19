@@ -32,9 +32,6 @@ var TheFourthOfJuly = "Soundgarden's Darkest Song" // Pascal
 VeggieSalad = vegetable + " lettuce"; 
 alert (VeggieSalad); //will print "eggplant lettuce"
 
-// Reserved Words, dont name stuff with these - they get highlighted in your text editor of choice so this is pretty hard to screw up in practice
-// break else new var case finally return void catch for switch while continue function this with default if throw delete in try do instanceof typeof abstract enum int short boolean export interface static byte extends long super char final native synchronized class float package throws const goto private transient debugger implements protected volatile double import public
-
 
 
 // ##################################################################

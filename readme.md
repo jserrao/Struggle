@@ -29,7 +29,7 @@ Methods
 
 I'm tackling this using a variety of resources:
 * Step 1: Complete the first three steps in [Chrome Dev Tools, In-depth on Code School](http://discover-devtools.codeschool.com/)
-* Step 2: Read Chapters 1 + 2 + 3 in [Professional Javascript for Web Developers by Nicholas C. Zakas](http://m.friendfeed-media.com/95a8434720c64a63e96ff8c4364fb595d9e98c36)
+* Step 2: Read Chapters 1 + 2 [Professional Javascript for Web Developers by Nicholas C. Zakas](http://m.friendfeed-media.com/95a8434720c64a63e96ff8c4364fb595d9e98c36)
 
 If you have questions, hit me up via github and I'm sure we can sort it out.
 
