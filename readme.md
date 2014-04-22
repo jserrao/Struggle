@@ -28,10 +28,22 @@ Methods
 -----
 
 I'm tackling this using a variety of resources:
-* Step 1: Complete the first three steps in [Chrome Dev Tools, In-depth on Code School](http://discover-devtools.codeschool.com/)
-* Step 2: Read Chapters 1 + 2 [Professional Javascript for Web Developers by Nicholas C. Zakas](http://m.friendfeed-media.com/95a8434720c64a63e96ff8c4364fb595d9e98c36)
 
-If you have questions, hit me up via github and I'm sure we can sort it out.
+### Week 1
+
+* Complete the first three steps in [Chrome Dev Tools, In-depth on Code School](http://discover-devtools.codeschool.com/). This will help you be able to use the console in Chrome effectively for testing sample code.
+* Read the Intro of [Eloquent JS](http://eloquentjavascript.net/2nd_edition/preview/). Really good high level overview here.
+* Watch some of [Douglas Crawford's JS videos](http://yuiblog.com/crockford/) - Probably 1 & 2 to start. 
+* Read Chapters 1 + 2 [Professional Javascript for Web Developers by Nicholas C. Zakas](http://m.friendfeed-media.com/95a8434720c64a63e96ff8c4364fb595d9e98c36). This is heavy stuff, go slow and take lots of notes.
+
+
+### Week 2
+
+* Great intro to [Objects on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
+
+### TBD
+
+* As I get to it.
 
 
 What Does This Repo Do?
