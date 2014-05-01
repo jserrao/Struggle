@@ -126,17 +126,45 @@ var MeaningOfLife = String(null); 				// returns 'null' - null and undefined var
 
 
 
-// ###########################################################################
-// ######################## Reference Types / Classes ########################
-// ###########################################################################
+// #######################################################################################
+// ######################## Reference Types / Classes for Objects ########################
+// #######################################################################################
 
-var JoseCanseco = new ThePlayer();				// instantiates 'ThePlayer' object, but doesnt define it
+var JoseCanseco = new ThePlayer();				// instantiates 'ThePlayer' object, but doesnt define it (object needs at least one argument or method to work)
+
+// Don't create boolean objects - you can mix stuff up too easily
+
+var RafaelPalmeiroNumber = new Number(25).valueOf();				// returns '25' - valueOf method gives an object's value (if it's a number object)
+var GonzosMostProfilicHRYear = new Number(1996.47).toFixed(4);		// returns '1996.4700' because toFixed adds decimal places to a floating point number
+var DeanPalmerRookieYear = new Number(1989).toExponential(2);		// returns '1.99e+3' or 1.99 x 10^3, turned 1989 into an expoential number
 
 
 
+// ############################################################
+// ######################## Statements ########################
+// ############################################################
 
+// They are executed in linear order top --> bottom
 
+// Figure out what this means:
+var btn = document.getElementById(“myBtn”);
+var handler = function(event) {
+	switch(event.type) {
+		case “click”:
+		    alert(“Clicked”);
+		    break;
+		case “mouseover”:
+		    event.target.style.backgroundColor = “red”;
+		    break;
+		case “mouseout”:
+		    event.target.style.backgroundColor = “”;
+		    break;
+	}
+};
 
+btn.onclick = handler;
+btn.onmouseover = handler;
+btn.onmouseout = handler;
 
 
 

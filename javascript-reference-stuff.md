@@ -24,23 +24,50 @@ byte extends long super char final native synchronized class float package throw
 transient debugger implements protected volatile double import public
 ```
 
+Statements:
+
+```javascript
+// Conditional statements
+if statement
+switch statement
+
+// Looping statements
+while statement
+for statement
+do statement
+
+// Disruptive statements
+expression statement
+disruptive statement
+try statement
+
+// Falsy inputs, all else returns 'true'
+false, the keyword (but the string 'false' will return true)
+null
+undefined
+empty string ''
+0
+NaN
+
+
 Methods, as I come to them:
 ```javascript
 // Apend all JS methods like this: variable.method();
-.length;                                   // outputs length of string
-.toString();	                             // converts to a string
+.length;                                   	// outputs length of string
+.toString();	                           	// converts to a string
 
 
 
 
-// Object Methods
-.hasOwnProperty("string-here");            //not sure yet
-
-
+// Object Methods (arguments are in parenthesis)
+.hasOwnProperty("string-here");				// not sure yet
+.valueOf();									// returns the value of a number object
+.toFixed(#);								// adds decimal places to a floating point number object (argument is the number of decimal places)
+.toExponential(#)							// makes a number into 10^# format, with a certain number of decimal places (argument is the number of decimal places)
 
 ```
 
 
 
-> Much of this info is from [Professional Javascript for Web Developers by Nicholas C. Zakas](http://m.friendfeed-media.com/95a8434720c64a63e96ff8c4364fb595d9e98c36)
+> Much of this info is from [Professional Javascript for Web Developers by Nicholas C. Zakas](http://it-ebooks.info/book/483/)
 

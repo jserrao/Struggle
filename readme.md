@@ -34,22 +34,28 @@ I'm tackling this using a variety of resources:
 * Complete the first three steps in [Chrome Dev Tools, In-depth on Code School](http://discover-devtools.codeschool.com/). This will help you be able to use the console in Chrome effectively for testing sample code.
 * Read the Intro of [Eloquent JS](http://eloquentjavascript.net/2nd_edition/preview/). Really good high level overview here.
 * Watch some of [Douglas Crawford's JS videos](http://yuiblog.com/crockford/) - Probably 1 & 2 to start. 
-* Read Chapters 1 + 2 [Professional Javascript for Web Developers by Nicholas C. Zakas](http://m.friendfeed-media.com/95a8434720c64a63e96ff8c4364fb595d9e98c36). This is heavy stuff, go slow and take lots of notes.
+* Read Chapters 1 + 2 [Professional Javascript for Web Developers by Nicholas C. Zakas](http://it-ebooks.info/book/483/). This is heavy stuff, go slow and take lots of notes.
 
 
 ### Week 2
 
-* Great intro to [Objects on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
+
 
 ### TBD
 
 * As I get to it.
 
 
-What Does This Repo Do?
+
+Good Resources
 -----
 
-Nothing except that it shows you the steps I'm going through to learn JS.
+* Great intro to [Objects on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
+* [JS Closures](http://stackoverflow.com/questions/111102/how-do-javascript-closures-work?rq=1) explained on Stack Overflow
+* This book is supposed to be good [DOM Enlightenment](http://www.domenlightenment.com/), havent looked at it yet
+* Good resource / inspiration for organizing my learning here [Learn JS Six Week Class on Reddit](http://www.reddit.com/r/learnjavascript/comments/2179b5/learn_javascript_properly_omnibus_post_for_the/)
+* [Best Resource for Learning JS](http://stackoverflow.com/questions/11246/best-resources-to-learn-javascript)
+* Once you get a good handle on JS, this book mixes in jQuery quite heavily [Javascript, the Missing Manual](http://www.amazon.com/dp/0596515898)
 
 
 How Can I Contribute?
