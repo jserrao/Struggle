@@ -56,18 +56,21 @@ Methods, as I come to them:
 .length;                                   	// outputs length of string
 .toString();	                           	// converts to a string
 
-
-
-
 // Object Methods (arguments are in parenthesis)
 .hasOwnProperty("string-here");				// not sure yet
 .valueOf();									// returns the value of a number object
-.toFixed(#);								// adds decimal places to a floating point number object (argument is the number of decimal places)
 .toExponential(#)							// makes a number into 10^# format, with a certain number of decimal places (argument is the number of decimal places)
-
+.toFixed(#);								// adds decimal places to a floating point number object (argument is the number of decimal places)
 ```
 
-
+jQuery Attributes and Methods
+```javascript
+.keyup();									// watches how many times you release a key on the keyboard, ie: .keyup(updateCountdown); watches updateCountdown function
+.load();									// tells you when a certain site element has fully loaded (been inconsisent in use, might be deprecated now)
+.prop();									// enable/disable interactive form elements, ie: .prop('disabled', true); will disable the form element it is attached to
+.replaceWith();								// replaces a piece of content in a string, ie: $("#yourmom").replaceWith("div id='no-it's-your-dad'");
+.val();										// returns a string from a field when appended to an ID, usually a textbox
+```
 
 > Much of this info is from [Professional Javascript for Web Developers by Nicholas C. Zakas](http://it-ebooks.info/book/483/)
 
