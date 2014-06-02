@@ -56,6 +56,7 @@ Good Resources
 * Good resource / inspiration for organizing my learning here [Learn JS Six Week Class on Reddit](http://www.reddit.com/r/learnjavascript/comments/2179b5/learn_javascript_properly_omnibus_post_for_the/)
 * [Best Resource for Learning JS](http://stackoverflow.com/questions/11246/best-resources-to-learn-javascript)
 * Once you get a good handle on JS, this book mixes in jQuery quite heavily [Javascript, the Missing Manual](http://www.amazon.com/dp/0596515898)
+* A Way to Learn Javascript syntax by repair code via tests: [Javascript Koans](https://github.com/mrdavidlaing/javascript-koans)
 
 
 How Can I Contribute?
