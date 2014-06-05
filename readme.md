@@ -57,6 +57,7 @@ Good Resources
 * [Best Resource for Learning JS](http://stackoverflow.com/questions/11246/best-resources-to-learn-javascript)
 * Once you get a good handle on JS, this book mixes in jQuery quite heavily [Javascript, the Missing Manual](http://www.amazon.com/dp/0596515898)
 * A Way to Learn Javascript syntax by repair code via tests: [Javascript Koans](https://github.com/mrdavidlaing/javascript-koans)
+* A Great Little Piece on [Callback Functions, JavaScript.is(Sexy)](http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/)
 
 
 How Can I Contribute?
