@@ -5,7 +5,7 @@ Chrome Dev Tool Notes
 
 * On Mac OSX, the keyboard command to open the 
 `Option + Command + I`
-* *Edit as HTML* on the HTML element window allows you to just do buckwild on editing the whole HTML document
+* *Edit as HTML* on the HTML element window allows you to just go buckwild on editing the whole HTML document
 * *Delete Node* takes out a piece of HTML
 
 ## Ch 2: Style Panel
