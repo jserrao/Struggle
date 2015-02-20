@@ -189,4 +189,125 @@ var app = angular.module('store', []);
 // Only show the div if the images container has images (so check the images array and see that has something inside with length())
   <div class="gallery" ng-show="{{store.product.images.length()}}">
 
-//
+// #############################
+// 07 - ng-click, ng-init, ng-class directives
+// ng-click gives angular a way to evaluate an argument, as to whether or not action X should be happening
+// AKA, 2-way data binding, expression is re-evaluated when properties change
+
+// This would be saying, 'When value = 1, do something'
+// ng-init sets initial value of 'tab' here, so the angular can tell the browser which state to show first
+<section ng-init="tab = 1">  
+  <ul>
+    <li ng-class="{ active:tab === 1 }">
+      <a href ng-click="tab = 1">Description</a>
+    </li>
+    <li ng-class="{ active:tab === 2 }">
+      <a href ng-click="tab = 2">Description</a>
+    </li>
+    <li ng-class="{ active:tab === 3 }">
+      <a href ng-click="tab = 3">Description</a>
+    </li>
+  </ul>
+  {{ tab }} //expression get evaluated and output at '1' 2' or '3' depending on the tab you click
+</section>
+
+//using ng-show, you can tell angular to display content when a ng-click value is reached
+<div class="panel" ng-show="tab === 1">
+  <h4>Description</h4>
+  <p>{{product.description}}</p>
+</div>
+
+// In production, you'd take all this ng logic and put it into a controller
+  app.controller('PanelController', function(){
+    
+    // basically acts as ng-init, says tab starts at 1
+    this.tab = 1; 
+
+    // this piece is basically what ng-click was above
+    this.selectTab = function(setTab) {
+      this.tab = setTab;
+    };
+
+    // replaces ng-class logic in html, also replaces ng-show logic for the panels (to detect which one is selected)
+    // we check to see that the current tab is equal to this current tab we want to check, and then return that value
+    this.isSelected = function(checkTab) {
+      return this.tab === checktab;
+    };
+
+    // how to use a setTab method to set the tab property coming from the PanelController 
+    // selectedTab variable sets the tabcontroller up for success
+    this.setTab = function(selectedTab) {
+      this.tab = selectedTab;
+    };
+  });
+
+// with this controller, the HTML now looks like:
+// ng-init is replaced by the ng-controller directive, and the firs tpiece of code in the ng-controller for panels sets the tab = 1
+<section ng-controller="PanelController as panel">  
+  <ul>
+    // adds active class to each li when tab is clicked via controller
+    <li ng-class="{ active: panel.isSelected(1) }">
+      <a href ng-click="panel.selectTab(1)">Description</a>
+    </li>
+    <li ng-class="{ active: panel.isSelected(2) }">
+      <a href ng-click="panel.selectTab(2)">Description</a>
+    </li>
+    <li ng-class="{ active: panel.isSelected(3) }">
+      <a href ng-click="panel.selectTab(3)">Description</a>
+    </li>
+  </ul>
+
+  // uses ng-show + controller method 'isSelected' show corresponding tab
+  <div class="panel" ng-show="panel.isSelected(1)">
+    <h4>Description</h4>
+    <p>{{product.description}}</p>
+  </div>
+</section>
+
+// use ng-src to grab the current-th image (considering the controller is alias as product)
+<div class='gallery' ng-controller="GalleryController as gallery" ng-show="product.images.length">
+  <img ng-src="{{product.images[gallery.current]}}" />
+</div>
+
+// a ng-controller where I check to see if the setCurrent directive has been set (by checking for null state)
+  app.controller('GalleryController', function(){
+    this.current = 0;
+    
+    // setCurrent method to accepts a value and assigns it to current via variable settingTheCurrent
+    this.setCurrent = function(settingTheCurrent){
+
+      // if there isn't a value (check for null), set current to 0
+      if (settingTheCurrent !== null) {
+          this.current = settingTheCurrent;
+      } else {
+        this.current = 0
+      };
+    };
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
