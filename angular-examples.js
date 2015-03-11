@@ -285,7 +285,9 @@ var app = angular.module('store', []);
     };
   });
 
-// Forms and Models (ng-model directive)
+
+// #############################
+// 08 - Forms and Models (ng-model directive)
 // Take a simple form HTML
 
 <form name="reviewForm">
@@ -320,7 +322,8 @@ var app = angular.module('store', []);
 <input ng-model="review.color" type="radio" value="Red" />
 
 
-// Building a Controller and using ng-submit
+// #############################
+// 09 - Building a Controller and using ng-submit
 // We are going to connect our form to our controller by adding the controller alias to the expressions
 
 // First, we initialize the controller and create an empty review object
@@ -338,8 +341,8 @@ app.controller("ReviewController", function(){
   </blockquote>
 </form>
 
-//Fourth, we add in ng-submit to the form so it works!
-//ng-submit uses the controller alias to call the addReview function, sending in the current form as variable 'product'
+// Fourth, we add in ng-submit to the form so it works!
+// ng-submit uses the controller alias to call the addReview function, sending in the current form as variable 'product'
 <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)">
   <blockquote>
   <strong>Stars: {{ reviewCtrl.review.stars }}</strong>
@@ -348,11 +351,11 @@ app.controller("ReviewController", function(){
   </blockquote>
 </form>
 
-//Fifth, we need to place the 'addReview' function into the controller
+// Fifth, we need to place the 'addReview' function into the controller
 app.controller("ReviewController", function(){
   this.review = {};
 
-  //'push' literally pushes the contents of the product onto review's array
+  // 'push' literally pushes the contents of the product onto review's array
   this.addReview = function(product) {
     product.reviews.push(this.review);
     this.review = {}; //resets the form contents
@@ -360,14 +363,46 @@ app.controller("ReviewController", function(){
 });
 
 
+// #############################
+// 10 - Form validations, ng-pristine, ng-valid
+// First, turn off regular HTML form validations by adding 'novalidate' to the form tag and add mark fields as required
+<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)" novalidate>
+  <textarea name="body" ng-model="reviewCtrl.review.body" required></textarea>
+  <input name="author" ng-model="reviewCtrl.review.author" type="email" required>
+  <select ng-model-"reviewCtrl.review.stars" required>
+</form>
 
+// Second, print out form contents to check their validity
+// Angular gives us a little head start here with the $valid property - add it to the form name and $valid will check the form for us in real time
+<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)" novalidate>
+  <textarea name="body" ng-model="reviewCtrl.review.body" required></textarea>
+  <input name="author" ng-model="reviewCtrl.review.author" type="email" required>
+  <select ng-model-"reviewCtrl.review.stars" required>
 
+  <div>reviewForm is {{reviewForm.$valid}}</div> // how you add $valid into the mix
+</form>
 
+// Third, we add validation straight into the form submission process
+// Simply add 'reviewForm.$valid' into the ng-submit parameter with '&&' operator
+<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
 
+// Fourth, Angular auto-updates form element classes based on user input, goes through 3 stages (style accordingly to give user feedback)
+  // Stage 1 : input has not been touched, ng-pristine and ng-invalid are put on the element
+  <input name="author" class="ng-pristine ng-invalid">
 
+  // Stage 2: ng-dirty replaces ng-pristine as the user types
+  <input name="author" class="ng-dirty ng-invalid">  
 
+  // Stage 3: ng-valid replaces ng-invalid as the user's entry validates
+  <input name="author" class="ng-dirty ng-invalid">  
 
-
+// How to add a timestamp to a submission, add a key/value pair of key 'createdOn' with value using 'Date' method, to the array
+// For more info on how to use date in Angular, see this page: https://docs.angularjs.org/api/ng/filter/date
+    this.addReview = function(product){
+      this.review.createdOn = Date.now();
+      product.reviews.push(this.review);
+      this.review = {};
+    };
 
 
 
