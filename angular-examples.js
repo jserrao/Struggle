@@ -285,11 +285,79 @@ var app = angular.module('store', []);
     };
   });
 
+// Forms and Models (ng-model directive)
+// Take a simple form HTML
+
+<form name="reviewForm">
+
+  // live review with angular
+  // you bind the review elements to the form elements with ng-model directive
+  // this creates the two-way binding angular is known for
+  // ng-model works with select lists, textarea, textfields
+  <blockquote>
+    <strong></strong>
+    {{ review.body }}
+    <cite>by: {{ review.author }}</cite>
+  </blockquote>
+
+  //form input
+  // note how the ng-model instances correspond to the expressions
+  <select ng-model="review.stars">
+    <option value="1">1 star</option>
+    <option value="2">2 star</option>
+    <option value="3">3 star</option>
+    <option value="4">4 star</option>
+    <option value="5">5 star</option>
+  </select>
+  <textarea ng-model="review.body"></textarea>
+  <label>br:</label>
+  <input ng-model="review.author" type="email" />
+  <input type="sumbit" value="Submit" />
+</form>
+
+// ng-model also works with checkboxes and radio buttons
+<input ng-model="review.terms" type-"checkbox" />
+<input ng-model="review.color" type="radio" value="Red" />
 
 
+// Building a Controller and using ng-submit
+// We are going to connect our form to our controller by adding the controller alias to the expressions
 
+// First, we initialize the controller and create an empty review object
+app.controller("ReviewController", function(){
+  this.review = {};
+});
 
+// Second, we add add the controller into the form and give it an alias of 'reviewCtrl'
+// Third, we add 'reviewCtrl' to all the expression elements, so they connect into the controller properly
+<form name="reviewForm" ng-controller="ReviewController as reviewCtrl">
+  <blockquote>
+  <strong>Stars: {{ reviewCtrl.review.stars }}</strong>
+  {{ reviewCtrl.review.body }}
+  <cite>by: {{ reviewCtrl.review.author }}</cite>
+  </blockquote>
+</form>
 
+//Fourth, we add in ng-submit to the form so it works!
+//ng-submit uses the controller alias to call the addReview function, sending in the current form as variable 'product'
+<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)">
+  <blockquote>
+  <strong>Stars: {{ reviewCtrl.review.stars }}</strong>
+  {{ reviewCtrl.review.body }}
+  <cite>by: {{ reviewCtrl.review.author }}</cite>
+  </blockquote>
+</form>
+
+//Fifth, we need to place the 'addReview' function into the controller
+app.controller("ReviewController", function(){
+  this.review = {};
+
+  //'push' literally pushes the contents of the product onto review's array
+  this.addReview = function(product) {
+    product.reviews.push(this.review);
+    this.review = {}; //resets the form contents
+  }
+});
 
 
 
