@@ -39,7 +39,8 @@ Agile methods for developers can be extended further with a technique called *Co
 * Agile projects have many benefits for the working teams that build digital products but can be unsettling for stakeholders that have to foot the bill. Spending time up front to show how an agile project can better engage stakeholders and accelerate the development process is the best way to get buy-in for using this method. Failing that, many teams use something akin to a 'wagile' process where phases are created for external stakeholders while a more agile method is used internally.
 
 ## Recommended Tools
-* [Trello](https://trello.com) is a fantastic agile task organization tool. 
+* [JIRA ](https://www.atlassian.com/software/jira) is the defacto standard for agile project management. It's hugely powerful but cumbersome for all but the largest development projects.
+* [Trello](https://trello.com) is a fantastic agile task organization tool. It's a lighter, easier version of agile that adheres to the Kanban philosophy very closely.
 * For waterfall projects, the standard is [MS Project](https://products.office.com/en-us/Project/project-and-portfolio-management-software). It generates the cascading gantt charts that have come to define project management for many folks.
 * [Merlin](http://projectwizards.net/en/products/merlin-project/what-is) on Mac is a nice MS Project alternative if you use a Mac. 
 
