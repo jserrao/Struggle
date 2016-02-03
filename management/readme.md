@@ -1,5 +1,4 @@
 # Management 
-========
 
 Software development is detail-oriented, technical work that scares many people. Humans inherently fear the unknown and the digital world fits into that category for most people you will work with. Effectively managing digital deliverables is about mitigating this fear with organization, participation and flexibility.
 
@@ -44,6 +43,7 @@ Agile methods for developers can be extended further with a technique called *Co
 * For waterfall projects, the standard is [MS Project](https://products.office.com/en-us/Project/project-and-portfolio-management-software). It generates the cascading gantt charts that have come to define project management for many folks.
 * [Merlin](http://projectwizards.net/en/products/merlin-project/what-is) on Mac is a nice MS Project alternative if you use a Mac. 
 
-## Additional Reading: 
+## Additional Reading
+* Someday soon...
 
 
