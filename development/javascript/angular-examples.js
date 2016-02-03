@@ -404,7 +404,9 @@ app.controller("ReviewController", function(){
       this.review = {};
     };
 
-
+// #############################
+// 11 - Form validations, ng-pristine, ng-valid
+// First, turn off regular HTML form validations by adding 'novalidate' to the form tag and add mark fields as required
 
 
 

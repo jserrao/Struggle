@@ -29,7 +29,7 @@ var theDarkSideOfTheMoon = "A Damn Fine Album"; // camelCase
 var TheFourthOfJuly = "Soundgarden's Darkest Song" // Pascal
 
 // You can define a variable on the fly - DONT DO THIS!
-VeggieSalad = vegetable + " lettuce"; 
+VeggieSalad = vegetable + " lettuce";
 alert (VeggieSalad); //will print "eggplant lettuce"
 
 
@@ -57,7 +57,7 @@ console.log (isNaN (NumberOfBrainCells));
 
 // Number variables can also be octal (base 8) or hexadecimal (base 16) but are generally decimal (base 10).
 var HexThatNumber = 0xAB; 		// first digit = 0, second digit = x, third and fourth digits = 0-9 or A-F
-var AverageGPA = 4.3; 			// floating point just happens when you add in a decimal (stored as string until needed
+var AverageGPA = 4.3; 			// floating point just happens when you add in a decimal (stored as string until needed)
 var BigAssNumber = 3.175e8; 	// basically 3.175 x 10^8
 
 
@@ -93,7 +93,7 @@ console.log(PillowsPerHousehold.toString());
 
 //Change it to a hexidecial (parenthesis value is radix, or the base number set you want to use)
 var aGoodLengthVacation = 10;
-console.log(aGoodLengthVacation.toString(16)); 
+console.log(aGoodLengthVacation.toString(16));
 
 // parseInt() - takes a string and make it a number, as best it can (with radix mode)
 var PurgatoryWouldBe = parseInt("1000 Long Mondays"); // will output '1000' because it chops off non number stuff
@@ -112,7 +112,7 @@ var HeightOfAndreTheGiant = parseFloat("I don't know, let me check google"); // 
 // Boolean(parameter-here);
 var Chinatown = Boolean("Jack Nicholson"); 		// returns 'true' because value had at least one character
 var ApocalypseNow = Boolean("1979"); 			// returns 'true' because there was at least one number
-var SmashingPumpkinsEP = Boolean("0"); 			// returns 'false' because there was no number 
+var SmashingPumpkinsEP = Boolean("0"); 			// returns 'false' because there was no number
 
 // Number(parameter-here);
 var GiantAirplaneModel = Number("A380"); 		// returns 'NaN' because it hits the A character before the number, invalidating the response
@@ -172,7 +172,7 @@ btn.onmouseout = handler;
 // ######################## DOM Transversal ########################
 // #################################################################
 
-// The DOM is really just your HTML layout tree  made accessible by a W3C API all the browser big dogs have adopted
+// The DOM is really just your HTML layout tree made accessible by a W3C API all the browser big dogs have adopted
 
 //Get's an element by it's ID
 document.getElementById('ID-goes-here');
@@ -181,6 +181,9 @@ document.getElementById('ID-goes-here');
 exactly like CSS */
 // Single line comments are like C++ and Java
 
-//Braces { } mark a code block 
+// Braces { } mark a code block
 
 
+// #########################################################
+// ######################## Objects ########################
+// #########################################################
