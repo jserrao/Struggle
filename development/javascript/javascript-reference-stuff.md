@@ -17,27 +17,30 @@ Simple operators
 
 Complex operators
 ```javascript
-!== ===   // Comparison operator (equal | not equal)
-if ( 12 !== myVariable.height() ) {  
+!== ===           // Comparison operator (equal | not equal)
+if ( 12 !== myVariable.height ) {  
   // do something
 }           
 
-&& ||     // Logical comparison operator (and | or)
-
+&& ||             // Logical comparison operator (and | or)
+if ( myVariable.height === 12 && myVariable.width === 36 ) {  
+  // do something
+}     
 
 (x ? y : z)       // ternary
+(myVariable ? 12 : 13)
 ```
 
 Escape Characters in JS:
 ```javascript
-\n     // Newline
-\t     // Tab
-\b     // Backspace
-\r     // Carriage return
-\f     // Formfeed
-\\     // Backslash
-\’     // Single quote
-\”     // Double quote
+\n                // Newline
+\t                // Tab
+\b                // Backspace
+\r                // Carriage return
+\f                // Formfeed
+\\                // Backslash
+\’                // Single quote
+\”                // Double quote
 ```
 
 Reserved Words, dont name stuff with these in JS:
@@ -79,8 +82,6 @@ Methods, as I come to them:
 // Append all JS methods like this: variable.method();
 .length;                      // outputs length of string
 .toString();	                // converts to a string
-
-// Object Methods (arguments are in parenthesis)
 .typeOf(variableName);				// gets type of JS variable (integer, string, etc)
 .valueOf();                   // returns the value of a number object
 .toExponential(#);            // makes a number into 4e8 (argument is the number of decimal places)
